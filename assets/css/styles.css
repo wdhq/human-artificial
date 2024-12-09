@@ -189,6 +189,7 @@ h3, .footer-links, .nav-btn {
     grid-gap: 30px;
     text-align: center;
     justify-content: center;
+    top: 50px;
 }
 
 .index-section h1 {
