@@ -47,23 +47,23 @@
 /* Light Theme */
 :root.light {
     --primary-color: #151d27;
-    --secondary-color: #243142;
+    --secondary-color: #3b4859;
     --accent-color: #e9edf0;
     --background-color: #f5f7f9;
 }
 
 /* Dark Theme */
 :root.dark {
-    --primary-color: #e6edf3;
+    --primary-color: #dae4ec;
     --secondary-color: #243142;
     --accent-color: #151d27;
     --background-color: #0d1116;
 }
 
 :root {
-    --h1-font: 2.25rem;
-    --h2-font: 1.25rem;
-    --h3-font: 0.85rem;
+    --h1: 2.25rem;
+    --h2: 1.25rem;
+    --p: 0.85rem;
 }
 
 html {
@@ -84,26 +84,25 @@ body {
 }
 
 h1 {
-    line-height: calc(var(--h1-font)*1.2);
-    font-size: var(--h1-font);
+    line-height: calc(var(--h1)*1.25);
+    font-size: var(--h1);
     font-weight: 600;
 }
 
 h2, .btn-secondary {
-    line-height: calc(var(--h2-font)*1.2);
-    font-size: var(--h2-font);
+    line-height: calc(var(--h2)*1.25);
+    font-size: var(--h2);
     font-weight: 400;
 }
 
-h2 span {
-    font-family: 'Inter', sans-serif;
-    font-style: italic;
+p, .footer-links, .nav-btn, .nav-btn.secondary {
+    line-height: calc(var(--p)*1.25);
+    font-size: var(--p);
+    font-weight: 400;
 }
 
-h3, .footer-links, .nav-btn {
-    line-height: calc(var(--h3-font)*1.2);
-    font-size: var(--h3-font);
-    font-weight: 400;
+p {
+    opacity: 0.8;
 }
 
 .header {
@@ -112,6 +111,20 @@ h3, .footer-links, .nav-btn {
     align-items: center;
     margin: 0 auto;
     gap: 20px;
+    margin-bottom: 50px;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+.footer, .footer a {
+    color: var(--secondary-color);
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+    opacity: 0.8;
 }
 
 .navbar {
@@ -158,7 +171,6 @@ h3, .footer-links, .nav-btn {
 .nav-btn.secondary {
     padding: 15px 25px;
     border: 1px solid var(--secondary-color);
-    font-size: var(--h3-font);
     margin: 0 auto;
 }
 
@@ -189,7 +201,6 @@ h3, .footer-links, .nav-btn {
     grid-gap: 30px;
     text-align: center;
     justify-content: center;
-    top: 50px;
 }
 
 .index-section h1 {
@@ -213,4 +224,19 @@ h3, .footer-links, .nav-btn {
 .logo-art {
     color: var(--primary-color);
     text-decoration: none;
+}
+
+.manifesto-section, .resources-section {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 545px;
+    justify-content: center;
+    text-align: justify;
+}
+
+.manifesto-section h2, .resources-section h2 {
+    font-weight: 600;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 10px;
 }
