@@ -250,7 +250,7 @@ p {
     font-size: var(--p);
 }
 
-.manifesto-section, .resources-section {
+.cot-section, .resources-section {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -259,7 +259,7 @@ p {
     text-align: justify;
 }
 
-.manifesto-section h2, .resources-section h2 {
+.cot-section h2, .resources-section h2 {
     display: flex;
     gap: 5px;
     font-weight: 600;
