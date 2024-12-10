@@ -35,11 +35,11 @@
     font-style: normal;
 }
 
-/* Ubuntu Mono Font */
+/* DepartureMono Font */
 @font-face {
-    font-family: 'Ubuntu Mono';
-    src: url('../fonts/UbuntuMono/UbuntuMono-Bold.woff2') format('woff2'),
-         url('../fonts/UbuntuMono/UbuntuMono-Bold.woff') format('woff');
+    font-family: 'DepartureMono';
+    src: url('../fonts/DepartureMono/DepartureMono-Regular.woff2') format('woff2'),
+         url('../fonts/DepartureMono/DepartureMono-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -64,6 +64,7 @@
     --h1: 2.25rem;
     --h2: 1.25rem;
     --p: 0.85rem;
+    --link-color: #1972e6;
 }
 
 html {
@@ -95,10 +96,14 @@ h2, .btn-secondary {
     font-weight: 400;
 }
 
+h2 a {
+    color: var(--link-color);
+    font-size: var(--p);
+}
+
 p, .footer-links, .nav-btn, .nav-btn.secondary {
     line-height: calc(var(--p)*1.25);
     font-size: var(--p);
-    font-weight: 400;
 }
 
 p {
@@ -158,6 +163,19 @@ p {
     text-decoration: none;
 }
 
+@keyframes rainbow {
+    0% { color: var(--primary-color); }
+    20% { color: violet; }
+    40% { color: orange; }
+    60% { color: limegreen; }
+    80% { color: dodgerblue; }
+    100% { color: var(--primary-color); }
+}
+
+.nav-btn.special-font:hover {
+    animation: rainbow 5s infinite;
+}
+
 .nav-section.primary {
     display: flex;
     background-color: var(--primary-color);
@@ -213,29 +231,37 @@ p {
     padding: 20px 0;
 }
 
-#ascii-art, .logo-art {
-    font-family: 'Ubuntu Mono', monospace;
+#ascii-art, .ascii-art, .logo-art {
+    font-family: 'DepartureMono', monospace;
     color: var(--secondary-color);
     white-space: pre;
-    font-size: 0.6rem;
+    font-size: 0.55rem;
     text-align: center;
 }
 
 .logo-art {
-    color: var(--primary-color);
     text-decoration: none;
+    color: var(--primary-color);
+}
+
+.logo-art.special-font {
+    font-family: "Jacquarda Bastarda 9", serif;
+    color: var(--secondary-color);
+    font-size: var(--p);
 }
 
 .manifesto-section, .resources-section {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    width: 545px;
+    width: 600px;
     justify-content: center;
     text-align: justify;
 }
 
 .manifesto-section h2, .resources-section h2 {
+    display: flex;
+    gap: 5px;
     font-weight: 600;
     border-bottom: 1px solid var(--accent-color);
     padding-bottom: 10px;
