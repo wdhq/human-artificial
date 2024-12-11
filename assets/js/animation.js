@@ -1,5 +1,5 @@
 // This script handles loading and displaying ASCII frames in a loop
-fetch('assets/data.json')
+fetch('assets/js/data.json')
   .then(response => response.json())
   .then(frames => {
     const asciiArt = document.getElementById('ascii-art');

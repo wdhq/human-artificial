@@ -96,11 +96,6 @@ h2, .btn-secondary {
     font-weight: 400;
 }
 
-h2 a {
-    color: var(--link-color);
-    font-size: var(--p);
-}
-
 p, .footer-links, .nav-btn, .nav-btn.secondary {
     line-height: calc(var(--p)*1.25);
     font-size: var(--p);
@@ -192,6 +187,10 @@ p {
     margin: 0 auto;
 }
 
+.nav-btn.secondary .fas.fa-external-link {
+    font-size: calc(var(--h2)/2);
+}
+
 .parameters {
     display: flex;
     gap: 20px;
@@ -250,7 +249,7 @@ p {
     font-size: var(--p);
 }
 
-.cot-section, .resources-section {
+.resources-section {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -259,10 +258,15 @@ p {
     text-align: justify;
 }
 
-.cot-section h2, .resources-section h2 {
+.resources-section h2 {
     display: flex;
     gap: 5px;
     font-weight: 600;
     border-bottom: 1px solid var(--accent-color);
     padding-bottom: 10px;
+}
+
+.resources-section .fas.fa-external-link {
+    color: var(--link-color);
+    font-size: var(--p);
 }
